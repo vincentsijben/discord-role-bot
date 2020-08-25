@@ -1,5 +1,5 @@
 {
-  "name": "discordbot-djs-v12",
+  "name": "discord-role-bot",
   "version": "1.0.0",
   "description": "",
   "main": "./src/bot.js",
