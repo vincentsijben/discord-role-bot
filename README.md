@@ -43,3 +43,30 @@ npm run dev
 ```
 
 Now nodemon will start and every change in bot.js will restart the application automatically.
+
+# install Digital Ocean droplet
+Set up SSH keys and connect with:
+```
+ssh root@165.232.68.154
+//install node:
+sudo apt update
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt install npm
+sudo npm install -g pm2
+sudo apt install git-all
+cd ~
+git clone https://github.com/vincentsijben/discord-role-bot.git
+cd discord-role-bot
+npm i
+```
+to start:
+```
+pm2 start ./src/bot.js
+//start pm2 after reboot
+pm2 startup systemd
+//to see logs
+pm2 logs bot
+//to kill
+pm2 kill
+```
