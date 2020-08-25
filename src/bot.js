@@ -1,3 +1,5 @@
+// based on https://www.youtube.com/watch?v=98Wi_MJ1wOI
+
 const discord = require('discord.js');
 const client = new discord.Client({
     partials: ['MESSAGE', 'REACTION']
