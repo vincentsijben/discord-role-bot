@@ -11,10 +11,17 @@ client.on('ready', () => {
 
 client.on('messageReactionAdd', async (reaction, user) => {
 
+    let serverName = reaction.message.channel.guild.name;
+    console.log(`---------------------`);
+    console.log(`Server: ${serverName}`);
+    console.log(`---------------------`);
+    console.log(``);
     // only run code in introduction channel
-    if (!(reaction.message.channel.name === "introduction")) return;
-    console.log("this is the intro channel");
-
+    if (!(reaction.message.channel.name === "introduction")) {
+        console.log("this is *NOT* the introduction channel");
+        return;
+    }
+    
     let firstMessage = await reaction.message.channel.messages.fetch({ after: 0, limit: 1 });
     let firstMsgID = firstMessage.first().id;
 
@@ -59,9 +66,16 @@ client.on('messageReactionAdd', async (reaction, user) => {
 
 client.on('messageReactionRemove', async (reaction, user) => {
 
+    let serverName = reaction.message.channel.guild.name;
+    console.log(`---------------------`);
+    console.log(`Server: ${serverName}`);
+    console.log(`---------------------`);
+    console.log(``);
     // only run code in introduction channel
-    if (!(reaction.message.channel.name === "introduction")) return;
-    console.log("this is the intro channel");
+    if (!(reaction.message.channel.name === "introduction")) {
+        console.log("this is *NOT* the introduction channel");
+        return;
+    }
 
     let firstMessage = await reaction.message.channel.messages.fetch({ after: 0, limit: 1 });
     let firstMsgID = firstMessage.first().id;
