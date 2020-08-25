@@ -39,6 +39,7 @@ add this to the scripts section of package.json:
 and run the program with:
 ```
 npm run dev
+// or node .
 ```
 
 Now nodemon will start and every change in bot.js will restart the application automatically.
