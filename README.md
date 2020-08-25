@@ -26,6 +26,11 @@ To install this project:
 npm install --save discordjs/discord.js
 sudo npm install -g nodemon
 ```
+be sure to have git configured:
+```
+git config --global user.name "Vincent Sijben"
+git config --global user.email "vincent.sijben@zuyd.nl"
+```
 
 add this to the scripts section of package.json:
 ```
