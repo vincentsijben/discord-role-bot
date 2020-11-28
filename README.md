@@ -6,7 +6,7 @@ To create the bot:
 ```
 Go to https://discord.com/developers/applications
 Click New Application
-Give it a name like "CMD Role Bot"
+Give it a name like "MIA Role Bot"
 Give it a description
 Upload an app icon
 In the menu section go to Bot to add a Bot user
@@ -26,8 +26,8 @@ Go to Discord - Serversettings - Roles and make sure the bot role itself is abov
 
 To install this project:
 ```
-npm install --save discordjs/discord.js
-sudo npm install -g nodemon
+# sudo npm install -g nodemon # optional
+npm install
 ```
 be sure to have git configured:
 ```
@@ -42,7 +42,7 @@ add this to the scripts section of package.json:
 and run the program with:
 ```
 npm run dev
-// or node .
+# or node .
 ```
 
 Now nodemon will start and every change in bot.js will restart the application automatically.
@@ -59,8 +59,8 @@ sudo apt install npm
 sudo npm install -g pm2
 sudo apt install git-all
 cd ~
-git clone https://github.com/vincentsijben/discord-role-bot.git
-cd discord-role-bot
+git clone https://github.com/vincentsijben/mia-discord-role-bot.git
+cd mia-discord-role-bot
 npm i
 ```
 to start:
@@ -75,7 +75,7 @@ pm2 kill
 ```
 If there's an update in the code, make sure it's pushed to the online repository and run this on the server:
 ```
-cd ~/discord-role-bot
+cd ~/mia-discord-role-bot
 git stash
 git pull
 pm2 kill
