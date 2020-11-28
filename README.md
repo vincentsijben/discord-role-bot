@@ -15,6 +15,9 @@ Copy the token and paste it in ./config/config.json
 In the menu section go to OAuth2
 In the scopes section choose "bot"
 In the bot permissions section choose "Manage Roles"
+---
+Go to the BOT menu and enable both "Privileged Gateway Intents" intents.
+---
 Copy the URL, paste it in your browser, pick the correct server the bot needs to be added to.
 Go to Discord - Serversettings - Roles and make sure the bot role itself is above the other roles (right beneath admin)
 ```
