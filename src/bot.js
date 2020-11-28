@@ -12,7 +12,7 @@ client.on('ready', () => {
     console.log(client.user.tag + " has logged in.");
 });
 
-//client.on('raw', console.log);
+client.on('raw', console.log);
 
 client.on('messageReactionAdd', async (reaction, user) => {
     handleReaction(reaction, user, "apply");
