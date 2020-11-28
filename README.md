@@ -11,7 +11,7 @@ Give it a description
 Upload an app icon
 In the menu section go to Bot to add a Bot user
 Click Add Bot
-Copy the token and paste it in ./config/config.json
+Copy the token and paste it in ./config/config.json (first make a copy of config.json.example)
 In the menu section go to OAuth2
 In the scopes section choose "bot"
 In the bot permissions section choose "Manage Roles"
