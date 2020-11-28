@@ -73,3 +73,11 @@ pm2 logs bot
 //to kill
 pm2 kill
 ```
+If there's an update in the code, make sure it's pushed to the online repository and run this on the server:
+```
+cd ~/discord-role-bot
+git stash
+git pull
+pm2 kill
+pm2 start ./src/bot.js
+```
