@@ -73,7 +73,7 @@ let applyRole = async (reaction, user) => {
     let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
     try {
         if (role && member) {
-            console.log("Role and member found.");
+            console.log(`Role ${role.name} will be added for member ${member.user.username}.`);
             await member.roles.add(role);
             console.log("Done adding role.");
         }
@@ -89,7 +89,7 @@ let removeRole = async (reaction, user) => {
     let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
     try {
         if (role && member) {
-            console.log("Role and member found.");
+            console.log(`Role ${role.name} will be removed for member ${member.user.username}.`);
             await member.roles.remove(role);
             console.log("Done removing role.");
         }
