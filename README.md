@@ -81,3 +81,28 @@ git pull
 pm2 kill
 pm2 start ./src/bot.js
 ```
+
+## Login to server
+If you don't have access anymore or get a Permission denied message when trying to SSH, do the following:
+
+1. reset the root password in Digital Ocean's dashboard for this droplet.
+2. Launch the recovery console, enter the emailed root password and set a new one, for example: sdada#@#GF1
+3. Run this command on the server: `nano ~/.ssh/authorized_keys`
+4. Switch to your local machine and generate a new local ssh key with the command: ssh-keygen
+5. Give it a name like `/Users/vincent.sijben/.ssh/id_rsa_discord`
+6. Copy the contents of the key with the command: `cat ~/.ssh/id_rsa_discord.pub`
+7. Divide it in 5 chunks, because the recovery tool in Digital Ocean is buggy as hell while copying large amounts of texts.
+8. Paste these chunks in to the authorized_keys file that you've opened on the server.
+9. Restart the server
+10. Edit your local ssh config: `sudo nano ~/.ssh/config` and put in:
+```
+Host miadiscord
+        HostName 165.232.68.154
+        User root
+        IdentityFile /users/vincent.sijben/.ssh/id_rsa_discord
+        IdentitiesOnly yes
+```
+11. connect to server with: `ssh -i ~/.ssh/id_rsa_discord root@165.232.68.154` or `ssh miadiscord`
+12. If it doesn't work run this on the server: `nano /etc/ssh/sshd_config` and change `PasswordAuthentication` to `yes`.
+13. reload the SSH config with `serivce sshd reload`.
+14. Now you can run this from your local machine: ssh-copy-id root@165.232.68.154 and you're good to go.
