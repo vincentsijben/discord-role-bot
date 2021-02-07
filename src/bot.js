@@ -30,7 +30,7 @@ let handleReaction = async function (reaction, user, applyOrRemove) {
     console.log(``);
     
     // only run code in introduction channel
-    if (!(reaction.message.channel.name === "introduction")) {
+    if (!(reaction.message.channel.name === "introduction" || reaction.message.channel.name === "introductie")) {
         console.log(`"${reaction.message.channel.name}" is *NOT* the introduction channel`);
         return;
     }

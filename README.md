@@ -62,6 +62,9 @@ cd ~
 git clone https://github.com/vincentsijben/mia-discord-role-bot.git
 cd mia-discord-role-bot
 npm i
+cd config
+mv config.json.example config.json
+//copy paste your token
 ```
 to start:
 ```
